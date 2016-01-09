@@ -23,11 +23,13 @@
   )
 
 
-(q/defsketch flag-two
-  :title "Art!"
-  :middleware [quil.middleware/fun-mode]
-  :settings #(q/smooth 2)
-  :setup setup
-  :update update-state
-  :draw draw
-  :size [323 200])
+(defn run [] 
+  (q/defsketch flag-two
+    :title "Art!"
+    :middleware [quil.middleware/fun-mode]
+    :settings #(q/smooth 2)
+    :setup setup
+    :update update-state
+    :draw draw
+    :size [323 200]))
+; (run)

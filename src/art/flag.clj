@@ -17,11 +17,13 @@
   )
 
 
-(q/defsketch example
-  :title "Art!"
-  :middleware [quil.middleware/fun-mode]
-  :settings #(q/smooth 2)
-  :setup setup
-  :update update-state
-  :draw draw
-  :size [323 200])
+(defn run []
+  (q/defsketch example
+    :title "Art!"
+    :middleware [quil.middleware/fun-mode]
+    :settings #(q/smooth 2)
+    :setup setup
+    :update update-state
+    :draw draw
+    :size [323 200]))
+; (run)
