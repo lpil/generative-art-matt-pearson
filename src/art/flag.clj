@@ -1,14 +1,19 @@
-(ns art.core
+(ns art.flag
   (:require [quil.core :as q]
             [quil.middleware]))
 
 (defn setup []
-  0)
+  )
 
-(defn update-state [n]
-  n)
+(defn update-state [_]
+  )
 
-(defn draw [n]
+(defn draw [_]
+  (q/background 0 101 189)
+  (q/stroke-weight 30)
+  (q/stroke 255)
+  (q/line 0 0 (q/width) (q/height))
+  (q/line (q/width) 0 0 (q/height))
   )
 
 
@@ -19,6 +24,4 @@
   :setup setup
   :update update-state
   :draw draw
-  :size [540 350]
-  ; :size [1080 720]
-  )
+  :size [323 200])
