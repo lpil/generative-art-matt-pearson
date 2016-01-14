@@ -26,7 +26,6 @@
         num-rings (- (* num-flowers 2) 1)
         flower-sizes (take num-flowers sizes)
         ring-sizes (take num-rings sizes)]
-
     (q/stroke-weight 1)
     (doseq [size flower-sizes] (flower size))
     (q/stroke-weight 2)
@@ -40,7 +39,7 @@
   (q/stroke 255)
   (q/stroke-weight 1)
   (render)
-  ; (q/save "flower.png")
+  (q/save "flower.png")
   )
 
 (defn step [state] state)
@@ -60,4 +59,4 @@
     :draw draw
     :size [width height]
     ))
-(run)
+; (run)
