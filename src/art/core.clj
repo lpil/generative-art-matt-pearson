@@ -7,6 +7,10 @@
 ; (def width 1080)
 ; (def height 720)
 
+(defn render []
+  (q/background 0)
+  )
+
 (defn setup []
   (q/fill 0 0)
   (q/stroke 255)
@@ -31,4 +35,4 @@
     :draw draw
     :size [width height]
     ))
-(run)
+; (run)
