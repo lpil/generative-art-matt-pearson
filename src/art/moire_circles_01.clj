@@ -48,9 +48,9 @@
     (q/translate right 0)
     (circles max-size)
 
-    (if (> 180 (q/frame-count))
-      (q/save-frame "moire-####.png")
-      (q/exit))
+    ; (if (> 180 (q/frame-count))
+    ;   (q/save-frame "moire-####.png")
+    ;   (q/exit))
     ))
 
 (defn setup []
@@ -76,4 +76,4 @@
     :draw draw
     :size [width height]
     ))
-(run)
+; (run)
