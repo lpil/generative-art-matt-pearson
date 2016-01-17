@@ -10,7 +10,6 @@
 (def tri-width (* width 0.1))
 (def tri-height (* (Math/sqrt 3) 0.5 tri-width))
 
-
 (defn rotate-about-center [radians]
   (q/with-translation [(* 0.5 (q/width)) (* 0.5 (q/height))]
     (q/rotate radians)))
