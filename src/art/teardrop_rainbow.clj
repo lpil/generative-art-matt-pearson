@@ -22,9 +22,10 @@
         y (rand-int (q/height))
         r (random-color)
         g (random-color)
-        b (random-color)]
-    (q/fill r g b)
-    (teardrop x y 50)
+        b (random-color)
+        s (+ 10 (rand-int 50))]
+    (q/fill r g b 220)
+    (teardrop x y s)
     ))
 
 (defn setup []
