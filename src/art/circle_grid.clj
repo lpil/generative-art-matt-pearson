@@ -1,20 +1,20 @@
-(ns art.circle-grid
+(ns art.circle-waves
   (:require [quil.core :as q]
             [quil.middleware]))
 
-; (def width  810)
-; (def height 540)
-(def width  702)
-(def height 468)
+(def width  810)
+(def height 540)
+; (def width  702)
+; (def height 468)
 ; (def width 1080)
 ; (def height 720)
 
-(def dot-radius 10)
+(def dot-radius 4)
 ; (def radius 56.8)
-(def radius 65.0)
-(def x-size 15)
-(def y-size 10)
-(def speed 7)
+(def radius 30.0)
+(def x-size 28)
+(def y-size 19)
+(def speed 8)
 
 (defn record! []
   (if (<= (q/frame-count) (/ 360 speed))
@@ -30,7 +30,7 @@
 (defn orbit [x y n]
   (q/with-translation [x y]
     (q/fill 0 0)
-    (q/ellipse 0 0 radius radius)
+    ; (q/ellipse 0 0 radius radius)
     (q/fill 255)
     (let [degrees (+ x y (* speed n))]
       (q/with-rotation [(q/radians degrees)]
@@ -38,7 +38,10 @@
 
 
 (defn render []
-  (q/background 0)
+  ; (q/background 0)
+  (q/fill 0 100)
+  (q/no-stroke)
+  (q/rect 0 0 width height)
   (q/translate -11 -11)
   (doseq [[x y] (points radius x-size y-size)]
     (let [half (* 0.5 radius)
@@ -47,7 +50,7 @@
           step (q/frame-count)]
       (orbit x y step)
       (orbit xx yy step)))
-  (record!)
+  ; (record!)
   )
 
 
