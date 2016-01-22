@@ -1,2 +1,2 @@
-Quil Sketches
-=============
+Sketches
+========
